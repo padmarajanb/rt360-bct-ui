@@ -1,0 +1,62 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import "rt360app.scss";
+:root {
+    --fs-9: 9px;
+    --fs-10: 10px;
+    --fs-11: 11px;
+    --fs-12: 12px;
+    --fs-13: 13px;
+    --fs-14: 14px;
+    --fs-15: 15px;
+    --fs-16: 16px;
+    --fs-18: 18px;
+    --fs-20: 20px;
+    --fs-22: 22px;
+    --fs-24: 24px;
+    --fs-28: 28px;
+    --fs-30: 30px;
+    --fs-32: 32px;
+    --fs-36: 36px;
+    --fs-48: 48px;
+    --fc-0: #000;
+    --fc-3: #3c464e;
+    --fc-7: #7a8084;
+    --font: Roboto-Regular;
+    --font-light: Roboto-Light;
+    --font-lightitalic: Roboto-LightItalic;
+    --font-bold: Roboto-Bold;
+    --font-bolditalic: Roboto-BoldItalic;
+    --header-color: #0097e6;
+    --reg-color: #164380;
+  }
+  
+  @font-face {
+    font-family: "Roboto-Regular";
+    src: url("./assets/fonts/Roboto-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Roboto-Light";
+    src: url("./assets/fonts/Roboto-Light.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Roboto-LightItalic";
+    src: url("./assets/fonts/Roboto-LightItalic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Roboto-Bold";
+    src:  url("./assets/fonts/Roboto-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Roboto-BoldItalic";
+    src:  url("./assets/fonts/Roboto-BoldItalic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+  }

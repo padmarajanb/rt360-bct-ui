@@ -1,0 +1,75 @@
+<header class="header">
+    <a class="logo" href="/"></a>
+    <div class="box-skew"></div>
+    <nav class="header-nav">
+        <ul class="nav-items">
+            <li>
+                <button><i class="bi bi-person-fill"></i></button>
+            </li>
+            <li>
+                <button><i class="bi bi-file-earmark"></i></button>
+            </li>
+            <li>
+                <button><i class="bi bi-search"></i></button>
+            </li>
+            <li>
+                <button><i class="bi bi-envelope"></i></button>
+            </li>
+            <li>
+                <button><i class="bi bi-gear"></i></button>
+            </li>
+            <li class="nav-profile">
+                <img src="./assets/images/profile-img.jpg">
+                <span>Admin</span>
+            </li>
+        </ul>
+    </nav>
+</header>
+<aside class="sidebar ">
+    <ul class="sidebar-nav ">
+        <li>
+            <kendo-icon name="template-manager" size="xlarge"></kendo-icon>
+        </li>
+        <li class="active">
+            <button><i class="bi bi-file-earmark-text"></i></button>
+        </li>
+    </ul>
+</aside>
+<main id="main">
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="">
+                    <kendo-icon name="template-manager" size="small"></kendo-icon>
+                    Strategy, Record & Monitor</a></li>
+            <li class="breadcrumb-item"><a href="">Strategize</a></li>
+            <li class="breadcrumb-item"><a href="">Manage Email</a></li>
+            <li class="breadcrumb-item active">Email Template Configuration</li>
+        </ol>
+    </nav>
+    <section class="section">
+        <div class="header-container">
+            <h2 class="heading">Email Template Configuration</h2>
+            <button class="primary-btn"><i class="bi bi-plus"></i>Configure Email Template</button>
+        </div>
+        <kendo-grid [kendoGridBinding]="gridView" [pageable]="true" [pageSize]="pageSize" scrollable="none">
+            <kendo-grid-column field="Sno" title="S.No"> </kendo-grid-column><kendo-grid-column field="EmailTemplateID"
+                title="Email Template ID"> </kendo-grid-column>
+            <kendo-grid-column field="EmailTemplateName" title="Email Template Name"> </kendo-grid-column>
+            <kendo-grid-column field="CreatedOn" title="Created On"> </kendo-grid-column>
+            <kendo-grid-column field="CreatedBy" title="Created By"> </kendo-grid-column>
+            <kendo-grid-column field="Action" title="Action">
+                <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+                    <button kendoButton iconClass="bi bi-eye" size="small">View</button>
+                    <button kendoButton iconClass="bi bi-pencil" size="small">Edit</button>
+                    <button kendoButton iconClass="bi bi-trash" size="small">Delete</button>
+                </ng-template>
+            </kendo-grid-column>
+            <ng-template kendoPagerTemplate let-totalPages="totalPages" let-currentPage="currentPage">
+                <kendo-pager-prev-buttons></kendo-pager-prev-buttons>
+                <kendo-pager-numeric-buttons [buttonCount]="buttonCount"></kendo-pager-numeric-buttons>
+                <kendo-pager-next-buttons></kendo-pager-next-buttons>
+                <kendo-pager-info></kendo-pager-info>
+            </ng-template>
+        </kendo-grid>
+    </section>
+</main>

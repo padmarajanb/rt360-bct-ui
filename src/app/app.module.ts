@@ -13,12 +13,18 @@ import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { LabelModule } from '@progress/kendo-angular-label';
 import { EmailTemplateConfigComponent } from './email-template/email-template-config/email-template-config.component';
+import { CreateEmailTemplateConfigComponent } from './email-template/create-email-template-config/create-email-template-config.component';
+import { EmailFrequencyConfigComponent } from './email-frequency/email-frequency-config/email-frequency-config.component';
+import { EditEmailFrequencyConfigComponent } from './email-frequency/edit-email-frequency-config/edit-email-frequency-config.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    EmailTemplateConfigComponent
+    EmailTemplateConfigComponent,
+    CreateEmailTemplateConfigComponent,
+    EmailFrequencyConfigComponent,
+    EditEmailFrequencyConfigComponent
   ],
   imports: [
     BrowserModule,

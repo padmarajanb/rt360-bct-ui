@@ -32,7 +32,7 @@ import { EditEmailFrequencyConfigComponent } from './email-frequency/edit-email-
     RouterModule.forRoot([
       {
         path: '',
-        component: EmailTemplateConfigComponent
+        component: HomeComponent
       }
     ]),
     GridModule,

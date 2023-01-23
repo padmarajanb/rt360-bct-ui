@@ -17,10 +17,15 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  navLinkInfo = '';
+
   
   public gridView: any[] = emailtemplateconfigData;
   public pageSize = 6;
   public buttonCount = 1;
   public sizes = [10, 20, 50];
 
+  updateNavLink(linkInfo: string){
+    this.navLinkInfo = linkInfo;
+  }
 }

@@ -1,64 +1,54 @@
-export const sampleCustomers = [{
-    'Id': 'ALFKI',
-    'CompanyName': 'Alfreds Futterkiste',
-    'ContactName': 'Maria Anders',
-    'ContactTitle': 'Sales Representative',
-    'City': 'Berlin'
-}, {
-    'Id': 'ANATR',
-    'CompanyName': 'Ana Trujillo Emparedados y helados',
-    'ContactName': 'Ana Trujillo',
-    'ContactTitle': 'Owner',
-    'City': 'México D.F.'
-}, {
-    'Id': 'ANTON',
-    'CompanyName': 'Antonio Moreno Taquería',
-    'ContactName': 'Antonio Moreno',
-    'ContactTitle': 'Owner',
-    'City': 'México D.F.'
-}, {
-    'Id': 'AROUT',
-    'CompanyName': 'Around the Horn',
-    'ContactName': 'Thomas Hardy',
-    'ContactTitle': 'Sales Representative',
-    'City': 'London'
-}, {
-    'Id': 'BERGS',
-    'CompanyName': 'Berglunds snabbköp',
-    'ContactName': 'Christina Berglund',
-    'ContactTitle': 'Order Administrator',
-    'City': 'Luleå'
-}, {
-    'Id': 'BLAUS',
-    'CompanyName': 'Blauer See Delikatessen',
-    'ContactName': 'Hanna Moos',
-    'ContactTitle': 'Sales Representative',
-    'City': 'Mannheim'
-}, {
-    'Id': 'BLONP',
-    'CompanyName': 'Blondesddsl père et fils',
-    'ContactName': 'Frédérique Citeaux',
-    'ContactTitle': 'Marketing Manager',
-    'City': 'Strasbourg'
-}, {
-    'Id': 'BOLID',
-    'CompanyName': 'Bólido Comidas preparadas',
-    'ContactName': 'Martín Sommer',
-    'ContactTitle': 'Owner',
-    'City': 'Madrid'
-}, {
-    'Id': 'BONAP',
-    'CompanyName': 'Bon app',
-    'ContactName': 'Laurence Lebihan',
-    'ContactTitle': 'Owner',
-    'City': 'Marseille'
-}, {
-    'Id': 'BOTTM',
-    'CompanyName': 'Bottom-Dollar Markets',
-    'ContactName': 'Elizabeth Lincoln',
-    'ContactTitle': 'Accounting Manager',
-    'City': 'Tsawassen'
-}];
+export const emailfrequencyconfigData = [
+    {
+        'Sno': '1',
+        'StrategyID': 'ST001',
+        'CBTID': '001',
+        'CBTName': 'Credit Portfolio',
+        'CreatedBy': 'Branch Manager',
+        'CreatedOn': '11.11.22',
+        'ModifiedBy': 'Regional Head',
+        'ModifiedOn': '25.11.22',
+    },
+    {
+        'Sno': '2',
+        'StrategyID': 'ST002',
+        'CBTID': '002',
+        'CBTName': 'Retail Portfolio',
+        'CreatedBy': 'Zone Head',
+        'CreatedOn': '09.11.22',
+        'ModifiedBy': 'HO User',
+        'ModifiedOn': '24.11.22',
+    },
+    {
+        'Sno': '3',
+        'StrategyID': 'ST003',
+        'CBTID': '003',
+        'CBTName': 'MSME Portfolio',
+        'CreatedBy': 'Branch Manager',
+        'CreatedOn': '15.11.22',
+        'ModifiedBy': 'Zone Head',
+        'ModifiedOn': '29.11.22',
+    },
+    {
+        'Sno': '4',
+        'StrategyID': 'ST004',
+        'CBTID': '004',
+        'CBTName': 'Agriculture Portfolio',
+        'CreatedBy': 'HR',
+        'CreatedOn': '06.11.22',
+        'ModifiedBy': 'Admin',
+        'ModifiedOn': '16.11.22',
+    },
+    {
+        'Sno': '5',
+        'StrategyID': 'ST005',
+        'CBTID': '005',
+        'CBTName': 'Consumer Loan Book',
+        'CreatedBy': 'Admin',
+        'CreatedOn': '05.11.22',
+        'ModifiedBy': 'Admin',
+        'ModifiedOn': '21.11.22',
+    }];
 
 export const emailtemplateconfigData = [
     {

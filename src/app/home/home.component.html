@@ -27,20 +27,43 @@
 </header>
 <aside class="sidebar ">
   <ul class="sidebar-nav ">
-    <li>
-     <kendo-icon name="template-manager" size="xlarge"></kendo-icon>
+    <li [ngClass]="{'active': navLinkInfo === ''}" (click)="updateNavLink('')">
+      <kendo-icon name="template-manager" size="xlarge"></kendo-icon>
     </li>
-    <li>
-      <button><i class="bi bi-file-earmark-text"></i></button>
+    <li class="">
+      <kendo-icon name="track-changes-enable" size="xlarge"></kendo-icon>
+    </li>
+    <li  [ngClass]="{'active': navLinkInfo !== ''}">
+      <kendo-icon name="dictionary-add" size="xlarge"></kendo-icon>
+    </li>
+    <li class="">
+      <kendo-icon name="file-txt" size="xlarge"></kendo-icon>
     </li>
   </ul>
 </aside>
-<main id="main">
-  <nav>
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="">Home</a></li>
-    </ol>
-  </nav>
-  <section class="section">
-  </section>
-</main>
+<ng-container *ngIf="navLinkInfo === ''">
+  <main id="main">
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="">Home</a></li>
+      </ol>
+    </nav>
+    <section class="section">
+      <div class="header-container">
+        <h2 class="heading">Nav Links</h2>
+      </div>
+      <div>
+        <ul>
+          <li (click)="updateNavLink('emailTemplateConfig')"><a>Email Template Configuration</a></li>
+          <li (click)="updateNavLink('emailFrequencyConfig')"><a>Email Frequency Configuration</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</ng-container>
+<ng-container *ngIf="navLinkInfo === 'emailTemplateConfig'">
+  <app-email-template-config></app-email-template-config>
+</ng-container>
+<ng-container *ngIf="navLinkInfo === 'emailFrequencyConfig'">
+  <app-email-frequency-config></app-email-frequency-config>
+</ng-container>

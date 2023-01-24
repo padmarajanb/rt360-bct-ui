@@ -12,6 +12,7 @@ import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { LabelModule } from '@progress/kendo-angular-label';
+import { EditorModule } from "@progress/kendo-angular-editor";
 import { EmailTemplateConfigComponent } from './email-template/email-template-config/email-template-config.component';
 import { CreateEmailTemplateConfigComponent } from './email-template/create-email-template-config/create-email-template-config.component';
 import { EmailFrequencyConfigComponent } from './email-frequency/email-frequency-config/email-frequency-config.component';
@@ -42,7 +43,8 @@ import { EditEmailFrequencyConfigComponent } from './email-frequency/edit-email-
     DropDownsModule,
     ButtonsModule,
     InputsModule,
-    LabelModule
+    LabelModule,
+    EditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

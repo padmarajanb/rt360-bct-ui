@@ -3,20 +3,23 @@
   <div class="box-skew"></div>
   <nav class="header-nav">
     <ul class="nav-items">
-      <li>
-        <button><i class="bi bi-person-fill"></i></button>
+      <li (click)="updateNavLink('')">
+        <button><kendo-icon name="home" size="medium"></kendo-icon></button>
       </li>
       <li>
-        <button><i class="bi bi-file-earmark"></i></button>
+        <button><kendo-icon name="user" size="medium"></kendo-icon></button>
       </li>
       <li>
-        <button><i class="bi bi-search"></i></button>
+        <button><kendo-icon name="file" size="medium"></kendo-icon></button>
       </li>
       <li>
-        <button><i class="bi bi-envelope"></i></button>
+        <button><kendo-icon name="zoom" size="medium"></kendo-icon></button>
       </li>
       <li>
-        <button><i class="bi bi-gear"></i></button>
+        <button><kendo-icon name="email" size="medium"></kendo-icon></button>
+      </li>
+      <li>
+        <button><kendo-icon name="gear" size="medium"></kendo-icon></button>
       </li>
       <li class="nav-profile">
         <img src="./assets/images/profile-img.jpg">
@@ -27,7 +30,7 @@
 </header>
 <aside class="sidebar ">
   <ul class="sidebar-nav ">
-    <li [ngClass]="{'active': navLinkInfo === ''}" (click)="updateNavLink('')">
+    <li>
       <kendo-icon name="template-manager" size="xlarge"></kendo-icon>
     </li>
     <li class="">
@@ -57,6 +60,7 @@
           <li (click)="updateNavLink('emailTemplateConfig')"><a>Email Template Configuration</a></li>
           <li (click)="updateNavLink('emailFrequencyConfig')"><a>Email Frequency Configuration</a></li>
           <li (click)="updateNavLink('editemailFrequencyConfig')"><a>Edit Email Frequency Configuration</a></li>
+          <li (click)="updateNavLink('createemailTemplateConfig')"><a>Create Email Template Configuration</a></li>
         </ul>
       </div>
     </section>
@@ -70,4 +74,7 @@
 </ng-container>
 <ng-container *ngIf="navLinkInfo === 'editemailFrequencyConfig'">
   <app-edit-email-frequency-config></app-edit-email-frequency-config>
+</ng-container>
+<ng-container *ngIf="navLinkInfo === 'createemailTemplateConfig'">
+  <app-create-email-template-config></app-create-email-template-config>
 </ng-container>

@@ -50,6 +50,28 @@ export const emailfrequencyconfigData = [
         'ModifiedOn': '21.11.22',
     }];
 
+    export const editemailfrequencyconfigData = [
+        {
+            'BucketNo': 'Bucket 1',
+            'BucketDesc': 'Very Low',
+        },
+        {
+            'BucketNo': 'Bucket 2',
+            'BucketDesc': 'Low',
+        },
+        {
+            'BucketNo': 'Bucket 3',
+            'BucketDesc': 'Medium',
+        },
+        {
+            'BucketNo': 'Bucket 4',
+            'BucketDesc': 'High',
+        },
+        {
+            'BucketNo': 'Bucket 5',
+            'BucketDesc': 'Very High',
+        }];
+
 export const emailtemplateconfigData = [
     {
         'Sno': '1',

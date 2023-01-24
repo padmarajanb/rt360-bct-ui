@@ -1,1 +1,34 @@
-<p>edit-email-frequency-config works!</p>
+<main id="main">
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="">
+                    <kendo-icon name="dictionary-add" size="default"></kendo-icon>
+                    Strategy, Record & Monitor</a></li>
+            <li class="breadcrumb-item"><a href="">Strategize</a></li>
+            <li class="breadcrumb-item"><a href="">Manage Email</a></li>
+            <li class="breadcrumb-item active">Email Frequency Configuration</li>
+        </ol>
+    </nav>
+    <section class="section">
+        <div class="header-container">
+            <h2 class="heading">Email Frequency Configuration</h2>
+        </div>
+        <kendo-grid [kendoGridBinding]="gridView" scrollable="none">
+            <kendo-grid-column field="BucketNo" title="Bucket No."></kendo-grid-column>
+            <kendo-grid-column field="BucketDesc" title="Bucket Description"></kendo-grid-column>
+            <kendo-grid-column field="EmailTemplate" title="Email Template">
+                <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+                    <kendo-dropdownlist textField="displayValue" valueField="actualValue">
+                    </kendo-dropdownlist>
+                </ng-template>
+            </kendo-grid-column>
+            <kendo-grid-column field="Frequency" title="Frequency">
+                <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+                    <kendo-dropdownlist textField="displayValue" valueField="actualValue">
+                    </kendo-dropdownlist>
+                </ng-template>
+            </kendo-grid-column>
+            <kendo-grid-column field="SelectDay" title="Select Day Of Week/Month"> </kendo-grid-column>
+        </kendo-grid>
+    </section>
+</main>

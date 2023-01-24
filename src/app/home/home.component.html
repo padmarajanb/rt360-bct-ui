@@ -56,6 +56,7 @@
         <ul>
           <li (click)="updateNavLink('emailTemplateConfig')"><a>Email Template Configuration</a></li>
           <li (click)="updateNavLink('emailFrequencyConfig')"><a>Email Frequency Configuration</a></li>
+          <li (click)="updateNavLink('editemailFrequencyConfig')"><a>Edit Email Frequency Configuration</a></li>
         </ul>
       </div>
     </section>
@@ -66,4 +67,7 @@
 </ng-container>
 <ng-container *ngIf="navLinkInfo === 'emailFrequencyConfig'">
   <app-email-frequency-config></app-email-frequency-config>
+</ng-container>
+<ng-container *ngIf="navLinkInfo === 'editemailFrequencyConfig'">
+  <app-edit-email-frequency-config></app-edit-email-frequency-config>
 </ng-container>

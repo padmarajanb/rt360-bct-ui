@@ -21,11 +21,11 @@
             <kendo-grid-column field="EmailTemplateName" title="Email Template Name"> </kendo-grid-column>
             <kendo-grid-column field="CreatedOn" title="Created On"> </kendo-grid-column>
             <kendo-grid-column field="CreatedBy" title="Created By"> </kendo-grid-column>
-            <kendo-grid-column field="Action" title="Action">
+            <kendo-grid-column field="Action" title="Action" [style]="{'text-align' : 'center'}" class="'center'">
                 <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
-                    <button kendoButton iconClass="bi bi-eye" size="small">View</button>
-                    <button kendoButton iconClass="bi bi-pencil" size="small">Edit</button>
-                    <button kendoButton iconClass="bi bi-trash" size="small">Delete</button>
+                    <button kendoButton iconClass="k-icon k-i-preview" size="small">View</button>
+                    <button kendoButton iconClass="k-icon k-i-edit" size="small">Edit</button>
+                    <button kendoButton iconClass="k-icon k-i-delete" size="small">Delete</button>
                 </ng-template>
             </kendo-grid-column>
             <ng-template kendoPagerTemplate let-totalPages="totalPages" let-currentPage="currentPage">

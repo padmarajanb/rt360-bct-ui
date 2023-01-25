@@ -17,6 +17,8 @@ import { EmailTemplateConfigComponent } from './email-template/email-template-co
 import { CreateEmailTemplateConfigComponent } from './email-template/create-email-template-config/create-email-template-config.component';
 import { EmailFrequencyConfigComponent } from './email-frequency/email-frequency-config/email-frequency-config.component';
 import { EditEmailFrequencyConfigComponent } from './email-frequency/edit-email-frequency-config/edit-email-frequency-config.component';
+import { PopupModule } from '@progress/kendo-angular-popup';
+
 
 @NgModule({
   declarations: [
@@ -44,7 +46,8 @@ import { EditEmailFrequencyConfigComponent } from './email-frequency/edit-email-
     ButtonsModule,
     InputsModule,
     LabelModule,
-    EditorModule
+    EditorModule,
+    PopupModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -37,17 +37,21 @@
                                 <kendo-dropdownlist textField="displayValue" valueField="actualValue">
                                 </kendo-dropdownlist>
                             </td>
-                            <td  [rowSpan]="rowIndex == 1 ||  rowIndex == 3 ? 2 : 1" *ngIf="rowIndex == 1 ||  rowIndex == 3">
+                            <td [rowSpan]="rowIndex == 1 ||  rowIndex == 3 ? 2 : 1"
+                                *ngIf="rowIndex == 1 ||  rowIndex == 3">
                                 <kendo-dropdownlist textField="displayValue" valueField="actualValue">
                                 </kendo-dropdownlist>
                             </td>
                         </tr>
                         <ng-container *ngIf="rowIndex == 1  ||  rowIndex == 3">
-                            <tr><td>Please Select day of week</td></tr>
+                            <tr>
+                                <td>Please Select day of week</td>
+                            </tr>
                         </ng-container>
                     </table>
                 </ng-template>
             </kendo-grid-column>
         </kendo-grid>
+        <button kendoButton themeColor="info">Confirm changes</button>
     </section>
 </main>

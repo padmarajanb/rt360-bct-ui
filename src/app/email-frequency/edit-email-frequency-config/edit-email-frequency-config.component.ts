@@ -7,7 +7,7 @@ import { editemailfrequencyconfigData } from 'src/app/datas';
   styleUrls: ['./edit-email-frequency-config.component.scss']
 })
 export class EditEmailFrequencyConfigComponent implements OnInit {
-
+  show = false;
 
   constructor() { }
 

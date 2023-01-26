@@ -8,12 +8,12 @@
             <li class="breadcrumb-item active">Create Group</li>
         </ol>
     </nav>
-    <section class="section">
-        <div class="header-container">
-            <h2 class="heading">Basic Details</h2>
+    <section class="section base-details">
+        <div class="header-container border-bottom">
+            <h2 class="heading ">Basic Details</h2>
         </div>
         <ng-container *ngIf="viewInfo === ''">
-            <div class="input-basic-item">
+            <div class="input-basic-item create-basic">
                 <kendo-label class="k-form" text="Group Name">
                     <kendo-textbox [style.width.px]="300" placeholder="" [clearButton]="true">
                     </kendo-textbox>
@@ -31,20 +31,36 @@
                     </kendo-dropdownlist>
                 </kendo-label>
             </div>
-            <button kendoButton themeColor="info" (click)="setViewInfo('assignPrivilege')"
+            <button class="primary-btn margin-left-auto" kendoButton themeColor="info" (click)="setViewInfo('assignPrivilege')"
                 iconClass="k-icon k-i-file-add">Assign Privilege</button>
         </ng-container>
-        <ng-container *ngIf="viewInfo === 'assignPrivilege'">
-            <div>
-                Group Name
-            </div>
+        <ng-container *ngIf="viewInfo === 'assignPrivilege'" >
+            <ul class="detail-list">
+                <li>
+                    <label> Group Name</label>
+                    <p>Branch 0ther Module Checker </p>
+                </li>
+                <li>
+                    <label> Group Description</label>
+                    <p>Branch 0ther Module Checker </p>
+                </li>
+                <li>
+                    <label> Assign Module</label>
+                    <p>All Module </p>
+                </li>
+                <li>
+                    <label> Assign Role</label>
+                    <p>Admin </p>
+                </li>
+               
+            </ul>
         </ng-container>
     </section>
     <section class="section" *ngIf="viewInfo === 'assignPrivilege'">
-        <div class="header-container">
+        <div class="header-container border-bottom">
             <h2 class="heading">Assign Privilege</h2>
         </div>
-        <kendo-grid [kendoGridBinding]="gridView" scrollable="none">
+        <kendo-grid [kendoGridBinding]="gridView" scrollable="none" class="border">
             <kendo-grid-column field="Srno" title="Sr.No"></kendo-grid-column>
             <kendo-grid-column field="Menu" title="Menu List"></kendo-grid-column>
             <kendo-grid-column [style]="{'text-align':'center'}"  field="EWS" title="EWS">
@@ -92,15 +108,15 @@
                     <kendo-label class="k-checkbox-label" [for]="No"></kendo-label>
                 </ng-template></kendo-grid-column>
         </kendo-grid>
-        <button kendoButton themeColor="info" (click)="open()"
+        <button class="primary-btn margin-left-auto"  kendoButton themeColor="info" (click)="open()"
             iconClass="k-icon k-i-check-circle">Confirm & Create Group</button>
     </section>
 </main>
 
 <kendo-dialog *ngIf="opened" (close)="close()">
     <kendo-dialog-titlebar></kendo-dialog-titlebar>
-    <div style="text-align: center; margin: 30px;">
-        <h6>Group ID : 1006 & Group Name : Branch-Others Module-Checker has been crated successfully</h6>
+    <div>
+        <p>Group ID : 1006 & Group Name : Branch-Others Module-Checker has been crated successfully</p>
         <button kendoButton themeColor="info" (click)="close()">OK</button>
     </div>
 </kendo-dialog>

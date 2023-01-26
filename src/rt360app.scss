@@ -22,6 +22,11 @@ button {
 body{
   background: #EFEFF1;
 }
+.margin-left-auto {
+  margin-left: auto;
+  display: inline-block;
+}
+
 .primary-btn {
   background:#3B73CD;
   font-size: 12px;
@@ -234,6 +239,7 @@ body{
   background-color: #fff;
   border-radius: 2px;
   padding: 15px 15px 80px 25px;
+  margin-bottom: 10px;
 }
 .header-container {
   display: flex;
@@ -241,8 +247,11 @@ body{
   margin-bottom: 15px;
 }
 .heading {
-  font-size: 18px;
-  font-family: var(--font-bold);
+  font-size: 15px;
+  font-weight: bold;
+}
+.border-bottom {
+  border-radius: 1px solid #f5f5f5;
 }
 @media (min-width: 1200px) {
 .logo img {
@@ -269,6 +278,19 @@ body{
 }
 
 .k-grid {
+  margin-bottom: 20px;
+  &.border {
+    border-left:1px solid #dee2e6 !important;
+    border-right:1px solid #dee2e6 !important;
+    .k-grid-header .k-table-th {
+      border-left: 1px solid #dee2e6;
+    }
+    td {
+      border-color: #dee2e6;
+      font-size: 12px;
+      border-width: 1px 0 0 1px;
+    }
+  }
   border: none;
   border-left:1px solid #fafafa;
   border-right:1px solid #fafafa;
@@ -278,13 +300,19 @@ body{
   .k-grid-header .k-table-th {
     border: none;
     border-top: transparent;
-    border-left: 2px solid white;
+    border-left: 2px solid #fff;
+    font-size: 12px;
+    font-weight: bold;
+    .k-button {
+      font-size: 12px;
+    }
     .k-table-th:first-child {
       border-left: 2px solid transparent;
     }
   }
   td, .k-table-td {
     border-color: transparent;
+    font-size: 12px;
   }
   td:first-child, .k-table-td:first-child {
     text-align: center;
@@ -329,15 +357,122 @@ body{
         width: 200px;
       }
     }
+    .template-item {
+      margin-left: 50px;
+    }
   }
-  .k-editor {
-    width: 80%;
+  .formate {
+    width: 175px !important;
   }
-  button {
+  .primary-btn {
     width: 100px;
     place-self: flex-end;
     text-align: center;
     display: flex;
     justify-content: center;
+  }
+}
+
+.admin-table {
+  width: 100%;
+  margin-bottom: 20px;
+  th {
+    background-color: #fafafa;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  th,td {
+    padding: 8px 12px;
+    border: 1px solid #f1f1f1;
+  }
+  td {
+    font-size: 12px;
+    select {
+        border-color: rgba(0, 0, 0, 0.08);
+        color: #424242;
+        background-color: #f5f5f5;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.02));
+        width: 125px;
+        padding: 4px 8px;
+    }
+  }
+}
+
+.k-dialog-titlebar {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.k-window-content {
+  text-align: center;
+  padding: 0;
+  font-size: 13px;
+  margin: 20px 25px;
+  button {
+    border-radius: 14px;
+    background: #1976d2;
+    color: #fff;
+    width: 100px;
+    height: 30px;
+  }
+}
+
+.create-basic {
+   justify-content: space-between ;
+   margin: 0 0 20px;
+   .k-picker-solid {
+    width: 200px;
+   
+   }
+}
+.base-details {
+  padding: 15px;
+  .detail-list{
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin: 0;
+    li {
+      font-size: 14px;
+      label {
+        font-weight: bold;
+      }
+      p {
+        margin: 10px 0 0 10px;
+      }
+    }
+  }
+}
+.work-flow {
+  display: flex;
+  position: relative;
+  width: 600px;
+  padding: 0;
+  margin: auto;
+  justify-content: space-between;
+  &::before {
+    content: "";
+    top: 15px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #0058e9;
+  }
+  li {
+    background: #fff;
+    border-radius: 15px;
+    height: 30px;
+    box-shadow: 0 0 3px rgb(0 0 0 / 50%);
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    z-index: 1;
+    color: #000;
+    font-size: 12px;
+    &.active {
+      font-weight: bold;
+    }
   }
 }

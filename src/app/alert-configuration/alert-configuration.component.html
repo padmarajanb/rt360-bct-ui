@@ -7,10 +7,15 @@
         </ol>
     </nav>
     <section class="section">
+        <ul class="work-flow">
+            <li>Manage Paramet...</li>
+            <li>Manage  Threshot...</li>
+            <li class="active">Manage  Workflow</li>
+        </ul>
         <div class="header-container">
             <h2 class="heading">Workflow Setup</h2>
         </div>
-        <kendo-grid [kendoGridBinding]="gridView" [pageable]="true" [pageSize]="pageSize" scrollable="none">
+        <kendo-grid [kendoGridBinding]="gridView" [pageable]="true" [pageSize]="pageSize" scrollable="none" class="border">
             <kendo-grid-column field="AlertID" title="Alert ID"></kendo-grid-column>
             <kendo-grid-column field="AlertDesc" title="Alert Description"> </kendo-grid-column>
             <kendo-grid-column field="Checker" title="Checker">

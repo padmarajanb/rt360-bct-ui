@@ -13,7 +13,7 @@
         <div class="header-container">
             <h2 class="heading">Email Frequency Configuration</h2>
         </div>
-        <kendo-grid [kendoGridBinding]="gridView" scrollable="none">
+        <!-- <kendo-grid [kendoGridBinding]="gridView" scrollable="none">
             <kendo-grid-column field="BucketNo" title="Bucket No."></kendo-grid-column>
             <kendo-grid-column field="BucketDesc" title="Bucket Description"></kendo-grid-column>
             <kendo-grid-column field="EmailTemplate" title="Email Template">
@@ -51,15 +51,124 @@
                     </table>
                 </ng-template>
             </kendo-grid-column>
-        </kendo-grid>
-        <button kendoButton themeColor="info" (click)="open()">Confirm changes</button>
+        </kendo-grid> -->
+
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>Bucket No</th>
+                    <th>BBucket Description</th>
+                    <th>Select Email Template</th>
+                    <th>Frequency</th>
+                    <th colspan="3">Day of Week/Month</th>   
+                </tr>
+            </thead>
+                <tr>
+                    <td>Bucket 1</td>
+                    <td>Very Low</td>
+                    <td>
+                        <Select>
+                            <option>SMA Template</option>
+                        </Select>
+                    </td>
+                    <td>
+                        <Select>
+                            <option>Monthly</option>
+                        </Select>
+                    </td>
+                    <td>Please Select Month</td>
+                    <td>
+                        <Select>
+                            <option>5</option>
+                        </Select>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Bucket 2</td>
+                    <td rowspan="2">Very Low</td>
+                    <td rowspan="2">
+                        <Select>
+                            <option>SMA Template</option>
+                        </Select>
+                    </td>
+                    <td rowspan="2">
+                        <Select>
+                            <option>Monthly</option>
+                        </Select>
+                    </td>
+                    <td>Please Select of Month</td>
+                    <td rowspan="2">
+                        <Select>
+                            <option>5</option>
+                        </Select>
+                    </td>
+                    <td rowspan="2">
+                        <Select>
+                            <option>15</option>
+                        </Select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Please Select of Week</td>
+                </tr>
+                <tr>
+                    <td>Bucket 3</td>
+                    <td>Very Low</td>
+                    <td>
+                        <Select>
+                            <option>SMA Template</option>
+                        </Select>
+                    </td>
+                    <td>
+                        <Select>
+                            <option>Monthly</option>
+                        </Select>
+                    </td>
+                    <td>Please Select Month</td>
+                    <td>
+                        <Select>
+                            <option>5</option>
+                        </Select>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Bucket 4</td>
+                    <td rowspan="2">Very Low</td>
+                    <td rowspan="2">
+                        <Select>
+                            <option>SMA Template</option>
+                        </Select>
+                    </td>
+                    <td rowspan="2">
+                        <Select>
+                            <option>Monthly</option>
+                        </Select>
+                    </td>
+                    <td>Please Select of Month</td>
+                    <td rowspan="2">
+                        <Select>
+                            <option>5</option>
+                        </Select>
+                    </td>
+                    <td rowspan="2">
+                        <Select>
+                            <option>15</option>
+                        </Select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Please Select of Week</td>
+                </tr>
+           
+        </table>
+        <button class="primary-btn margin-left-auto" kendoButton themeColor="info" (click)="open()">Confirm changes</button>
     </section>
 </main>
 
 <kendo-dialog *ngIf="opened" (close)="close()">
     <kendo-dialog-titlebar></kendo-dialog-titlebar>
-    <div style="text-align: center; margin: 30px;">
-        <h6>Email Frequency Configuration has updated successfully </h6>
+        <p>Email Frequency Configuration has updated successfully </p>
         <button kendoButton themeColor="info" (click)="close()">OK</button>
-    </div>
 </kendo-dialog>

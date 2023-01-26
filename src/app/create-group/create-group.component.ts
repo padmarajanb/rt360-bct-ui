@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { assignPrivilegeConfig } from '../datas';
 
 @Component({
   selector: 'app-create-group',
@@ -12,4 +13,10 @@ export class CreateGroupComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  viewInfo = '';
+  public gridView: any[] = assignPrivilegeConfig;
+
+  setViewInfo(info: any){
+    this.viewInfo = info;
+  }
 }

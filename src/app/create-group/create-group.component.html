@@ -1,1 +1,96 @@
-<p>create-group works!</p>
+<main id="main">
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="">
+                    <kendo-icon name="settings" size="default"></kendo-icon>
+                    User Management</a></li>
+            <li class="breadcrumb-item"><a href="">Group Details</a></li>
+            <li class="breadcrumb-item active">Create Group</li>
+        </ol>
+    </nav>
+    <section class="section">
+        <div class="header-container">
+            <h2 class="heading">Basic Details</h2>
+        </div>
+        <ng-container *ngIf="viewInfo === ''">
+            <div class="input-basic-item">
+                <kendo-label class="k-form" text="Group Name">
+                    <kendo-textbox [style.width.px]="300" placeholder="" [clearButton]="true">
+                    </kendo-textbox>
+                </kendo-label>
+                <kendo-label class="k-form" text="Group Description">
+                    <kendo-textarea [cols]="50" style="width: auto;">
+                    </kendo-textarea>
+                </kendo-label>
+                <kendo-label class="k-form" text="Assign Module">
+                    <kendo-dropdownlist textField="displayValue" valueField="actualValue">
+                    </kendo-dropdownlist>
+                </kendo-label>
+                <kendo-label class="k-form" text="Assign Role">
+                    <kendo-dropdownlist textField="displayValue" valueField="actualValue">
+                    </kendo-dropdownlist>
+                </kendo-label>
+            </div>
+            <button kendoButton themeColor="info" (click)="setViewInfo('assignPrivilege')"
+                iconClass="k-icon k-i-plus">Assign Privilege</button>
+        </ng-container>
+        <ng-container *ngIf="viewInfo === 'assignPrivilege'">
+            <div>
+                Group Name
+            </div>
+        </ng-container>
+    </section>
+    <section class="section" *ngIf="viewInfo === 'assignPrivilege'">
+        <div class="header-container">
+            <h2 class="heading">Assign Privilege</h2>
+        </div>
+        <kendo-grid [kendoGridBinding]="gridView" scrollable="none">
+            <kendo-grid-column field="Srno" title="Sr.No"></kendo-grid-column>
+            <kendo-grid-column field="Menu" title="Menu List"></kendo-grid-column>
+            <kendo-grid-column [style]="{'text-align':'center'}"  field="EWS" title="EWS">
+                <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+                    <input type="checkbox" #No kendoCheckBox />
+                    <kendo-label class="k-checkbox-label" [for]="No" text="No"></kendo-label>
+                    <input type="checkbox" #Read kendoCheckBox />
+                    <kendo-label class="k-checkbox-label" [for]="Read" text="Read"></kendo-label>
+                    <input type="checkbox" #Write kendoCheckBox />
+                    <kendo-label class="k-checkbox-label" [for]="Write" text="Write"></kendo-label>
+                </ng-template>
+            </kendo-grid-column>
+            <kendo-grid-column [style]="{'text-align':'center'}"  field="OTMS" title="OTMS">
+                <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+                    <input type="checkbox" #No kendoCheckBox />
+                    <kendo-label class="k-checkbox-label" [for]="No" text="No"></kendo-label>
+                    <input type="checkbox" #Read kendoCheckBox />
+                    <kendo-label class="k-checkbox-label" [for]="Read" text="Read"></kendo-label>
+                    <input type="checkbox" #Write kendoCheckBox />
+                    <kendo-label class="k-checkbox-label" [for]="Write" text="Write"></kendo-label>
+                </ng-template>
+            </kendo-grid-column>
+            <kendo-grid-column  [style]="{'text-align':'center'}" field="NRTMS" title="NRTMS">
+                <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+                    <input type="checkbox" #No kendoCheckBox />
+                    <kendo-label class="k-checkbox-label" [for]="No" text="No"></kendo-label>
+                    <input type="checkbox" #Read kendoCheckBox />
+                    <kendo-label class="k-checkbox-label" [for]="Read" text="Read"></kendo-label>
+                    <input type="checkbox" #Write kendoCheckBox />
+                    <kendo-label class="k-checkbox-label" [for]="Write" text="Write"></kendo-label>
+                </ng-template>
+            </kendo-grid-column>
+            <kendo-grid-column  [style]="{'text-align':'center'}" field="Others" title="Others">
+                <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+                    <input type="checkbox" #No kendoCheckBox />
+                    <kendo-label class="k-checkbox-label" [for]="No" text="No"></kendo-label>
+                    <input type="checkbox" #Read kendoCheckBox />
+                    <kendo-label class="k-checkbox-label" [for]="Read" text="Read"></kendo-label>
+                    <input type="checkbox" #Write kendoCheckBox />
+                    <kendo-label class="k-checkbox-label" [for]="Write" text="Write"></kendo-label>
+                </ng-template></kendo-grid-column>
+            <kendo-grid-column [style]="{'text-align':'center'}" field="LandingPage" title="Landing Page">
+                <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+                    <input type="checkbox" #No kendoCheckBox />
+                    <kendo-label class="k-checkbox-label" [for]="No"></kendo-label>
+                </ng-template></kendo-grid-column>
+        </kendo-grid>
+    </section>
+</main>

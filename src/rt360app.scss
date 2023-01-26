@@ -87,6 +87,11 @@ body{
   background:#3B73CD;
   transform: skew(20deg);
 }
+.k-switch-on .k-switch-track {
+  border-color: #3B73CD;
+  color: white;
+  background-color: #3B73CD;
+}
 .box-skew::after{
   z-index: -1;
   content: "";
@@ -291,6 +296,12 @@ body{
 .k-pager-numbers {
   background: #3D77D7;
   color: #fff;
+}
+
+.k-checkbox:checked, .k-checkbox.k-checked {
+    border-color: #3D77D7;
+    color: white;
+    background-color: #3D77D7;
 }
 
 .center{

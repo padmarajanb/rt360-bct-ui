@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { emailfrequencyconfigData } from 'src/app/datas';
+import { Rt360Service } from 'src/app/rt360.service';
 
 @Component({
   selector: 'app-email-frequency-config',
@@ -8,11 +9,15 @@ import { emailfrequencyconfigData } from 'src/app/datas';
 })
 export class EmailFrequencyConfigComponent implements OnInit {
 
-  constructor() { }
+  constructor(private rtService: Rt360Service) { }
 
   ngOnInit(): void {
   }
 
+
+  setPageInfo(){
+    this.rtService.pageInfo = 'editemailFrequencyConfig';
+  }
   
   public gridView: any[] = emailfrequencyconfigData;
   public pageSize = 5;

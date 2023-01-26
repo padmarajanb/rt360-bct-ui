@@ -52,6 +52,14 @@
                 </ng-template>
             </kendo-grid-column>
         </kendo-grid>
-        <button kendoButton themeColor="info">Confirm changes</button>
+        <button kendoButton themeColor="info" (click)="open()">Confirm changes</button>
     </section>
 </main>
+
+<kendo-dialog *ngIf="opened" (close)="close()">
+    <kendo-dialog-titlebar></kendo-dialog-titlebar>
+    <div style="text-align: center; margin: 30px;">
+        <h6>Email Frequency Configuration has updated successfully </h6>
+        <button kendoButton themeColor="info" (click)="close()">OK</button>
+    </div>
+</kendo-dialog>

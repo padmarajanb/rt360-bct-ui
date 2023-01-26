@@ -13,7 +13,7 @@
     <section class="section">
         <div class="header-container">
             <h2 class="heading">Email Template Configuration</h2>
-            <button kendoButton class="primary-btn"><i class="bi bi-plus"></i>Configure Email Template</button>
+            <button kendoButton themeColor="info" (click)="setPageInfo()" iconClass="k-icon k-i-plus">Configure Email Template</button>
         </div>
         <kendo-grid [kendoGridBinding]="gridView" [pageable]="true" [pageSize]="pageSize" scrollable="none">
             <kendo-grid-column field="Sno" title="S.No"> </kendo-grid-column><kendo-grid-column field="EmailTemplateID"

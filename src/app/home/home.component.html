@@ -36,7 +36,7 @@
     <li class="">
       <kendo-icon name="track-changes-enable" size="xlarge"></kendo-icon>
     </li>
-    <li  [ngClass]="{'active': navLinkInfo !== ''}">
+    <li [ngClass]="{'active': rtservice.pageInfo !== ''}">
       <kendo-icon name="dictionary-add" size="xlarge"></kendo-icon>
     </li>
     <li class="">
@@ -44,7 +44,7 @@
     </li>
   </ul>
 </aside>
-<ng-container *ngIf="navLinkInfo === ''">
+<ng-container *ngIf="rtservice.pageInfo === ''">
   <main id="main">
     <nav>
       <ol class="breadcrumb">
@@ -62,19 +62,29 @@
           <li (click)="updateNavLink('editemailFrequencyConfig')"><a>Edit Email Frequency Configuration</a></li>
           <li (click)="updateNavLink('createemailTemplateConfig')"><a>Create Email Template Configuration</a></li>
         </ul>
+        <ul class="main-nav">
+          <li (click)="updateNavLink('createGroup')"><a>Create Group</a></li>
+          <li (click)="updateNavLink('alertConfig')"><a>Alert Configuration</a></li>
+        </ul>
       </div>
     </section>
   </main>
 </ng-container>
-<ng-container *ngIf="navLinkInfo === 'emailTemplateConfig'">
+<ng-container *ngIf="rtservice.pageInfo === 'emailTemplateConfig'">
   <app-email-template-config></app-email-template-config>
 </ng-container>
-<ng-container *ngIf="navLinkInfo === 'emailFrequencyConfig'">
+<ng-container *ngIf="rtservice.pageInfo === 'emailFrequencyConfig'">
   <app-email-frequency-config></app-email-frequency-config>
 </ng-container>
-<ng-container *ngIf="navLinkInfo === 'editemailFrequencyConfig'">
+<ng-container *ngIf="rtservice.pageInfo === 'editemailFrequencyConfig'">
   <app-edit-email-frequency-config></app-edit-email-frequency-config>
 </ng-container>
-<ng-container *ngIf="navLinkInfo === 'createemailTemplateConfig'">
+<ng-container *ngIf="rtservice.pageInfo === 'createemailTemplateConfig'">
   <app-create-email-template-config></app-create-email-template-config>
+</ng-container>
+<ng-container *ngIf="rtservice.pageInfo === 'createGroup'">
+  <app-create-group></app-create-group>
+</ng-container>
+<ng-container *ngIf="rtservice.pageInfo === 'alertConfig'">
+  <app-alert-configuration></app-alert-configuration>
 </ng-container>

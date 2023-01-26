@@ -20,6 +20,8 @@ import { EditEmailFrequencyConfigComponent } from './email-frequency/edit-email-
 import { PopupModule } from '@progress/kendo-angular-popup';
 import { AlertConfigurationComponent } from './alert-configuration/alert-configuration.component';
 import { CreateGroupComponent } from './create-group/create-group.component';
+import { DialogsModule } from '@progress/kendo-angular-dialog';
+
 
 
 @NgModule({
@@ -51,7 +53,8 @@ import { CreateGroupComponent } from './create-group/create-group.component';
     InputsModule,
     LabelModule,
     EditorModule,
-    PopupModule
+    PopupModule,
+    DialogsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

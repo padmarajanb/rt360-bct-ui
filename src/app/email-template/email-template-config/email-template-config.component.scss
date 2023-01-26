@@ -12,3 +12,35 @@ h2{
 .center{
     text-align: center;
 }
+
+
+
+.k-grid {
+    border: none;
+    border-left:1px solid #fafafa;
+    border-right:1px solid #fafafa;
+    .k-cell-inner {
+      justify-content: center;
+    }
+    .k-grid-header .k-table-th {
+      border: none;
+      border-top: transparent;
+      border-left: 2px solid white;
+      .k-table-th:first-child {
+        border-left: 2px solid transparent;
+      }
+    }
+    td, .k-table-td {
+      border-color: transparent;
+    }
+    td:first-child, .k-table-td:first-child {
+      text-align: center;
+    }
+  }
+  .k-pager {
+    border: none;
+  }
+  .k-pager-numbers {
+    background: #3D77D7;
+    color: #fff;
+  }

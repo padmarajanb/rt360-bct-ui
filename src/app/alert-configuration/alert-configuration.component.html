@@ -1,1 +1,45 @@
-<p>alert-configuration works!</p>
+
+<main id="main">
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="">
+                Alert Configuration</a></li>    
+        </ol>
+    </nav>
+    <section class="section">
+        <div class="header-container">
+            <h2 class="heading">Workflow Setup</h2>
+        </div>
+        <kendo-grid [kendoGridBinding]="gridView" [pageable]="true" [pageSize]="pageSize" scrollable="none">
+            <kendo-grid-column field="AlertID" title="Alert ID"></kendo-grid-column>
+            <kendo-grid-column field="AlertDesc" title="Alert Description"> </kendo-grid-column>
+            <kendo-grid-column field="Checker" title="Checker">
+                <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+                    <kendo-switch [(ngModel)]="checked"></kendo-switch>
+                </ng-template>
+            </kendo-grid-column>
+            <kendo-grid-column field="Escalation" title="Escalation">
+                <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+                    <kendo-switch [(ngModel)]="checked"></kendo-switch>
+                </ng-template>
+            </kendo-grid-column>
+            <kendo-grid-column field="Branch" title="Branch"> </kendo-grid-column>
+            <kendo-grid-column field="Region" title="Escalation"> </kendo-grid-column>
+            <kendo-grid-column field="Zone" title="Escalation"> </kendo-grid-column>
+            <kendo-grid-column field="CentralZone" title="Central Zone"> </kendo-grid-column>
+            <kendo-grid-column field="CentralBranch" title="Central Branch"> </kendo-grid-column>
+            <kendo-grid-column field="Document" title="Document"> </kendo-grid-column>
+            <kendo-grid-column field="Action" title="Action" [style]="{'text-align' : 'center'}" class="'center'">
+                <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+                    <button  kendoButton themeColor="info">Edit</button>
+                </ng-template>
+            </kendo-grid-column>
+            <ng-template kendoPagerTemplate let-totalPages="totalPages" let-currentPage="currentPage">
+                <kendo-pager-prev-buttons></kendo-pager-prev-buttons>
+                <kendo-pager-numeric-buttons [buttonCount]="buttonCount"></kendo-pager-numeric-buttons>
+                <kendo-pager-next-buttons></kendo-pager-next-buttons>
+                <kendo-pager-info></kendo-pager-info>
+            </ng-template>
+        </kendo-grid>
+    </section>
+</main>

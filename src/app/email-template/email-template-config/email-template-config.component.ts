@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { SVGIcon, trashIcon } from "@progress/kendo-svg-icons";
+import { Rt360Service } from 'src/app/rt360.service';
 import { emailtemplateconfigData } from "../../datas";
 
 @Component({
@@ -11,7 +12,7 @@ import { emailtemplateconfigData } from "../../datas";
 export class EmailTemplateConfigComponent implements OnInit {
   trashIcon: any = trashIcon;
 
-  constructor() { }
+  constructor(private rtService: Rt360Service) { }
 
   ngOnInit(): void {
   }
@@ -21,5 +22,9 @@ export class EmailTemplateConfigComponent implements OnInit {
   public pageSize = 6;
   public buttonCount = 1;
   public sizes = [10, 20, 50];
+
+  setPageInfo(){
+    this.rtService.pageInfo = 'createemailTemplateConfig';
+  }
 
 }

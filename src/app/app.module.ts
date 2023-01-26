@@ -18,6 +18,8 @@ import { CreateEmailTemplateConfigComponent } from './email-template/create-emai
 import { EmailFrequencyConfigComponent } from './email-frequency/email-frequency-config/email-frequency-config.component';
 import { EditEmailFrequencyConfigComponent } from './email-frequency/edit-email-frequency-config/edit-email-frequency-config.component';
 import { PopupModule } from '@progress/kendo-angular-popup';
+import { AlertConfigurationComponent } from './alert-configuration/alert-configuration.component';
+import { CreateGroupComponent } from './create-group/create-group.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { PopupModule } from '@progress/kendo-angular-popup';
     EmailTemplateConfigComponent,
     CreateEmailTemplateConfigComponent,
     EmailFrequencyConfigComponent,
-    EditEmailFrequencyConfigComponent
+    EditEmailFrequencyConfigComponent,
+    AlertConfigurationComponent,
+    CreateGroupComponent
   ],
   imports: [
     BrowserModule,

@@ -36,7 +36,7 @@
     <li class="">
       <kendo-icon name="track-changes-enable" size="xlarge"></kendo-icon>
     </li>
-    <li [ngClass]="{'active': rtservice.pageInfo !== ''}">
+    <li [ngClass]="{'active': rtservice.pageInfo !== '' && rtservice.pageInfo !== 'createGroup' && rtservice.pageInfo !== 'alertConfig'}">
       <kendo-icon name="dictionary-add" size="xlarge"></kendo-icon>
     </li>
     <li class="">

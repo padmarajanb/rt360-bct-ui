@@ -12,6 +12,17 @@ export class CreateGroupComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+  public opened = false;
+
+  public close(): void {
+    this.opened = false;
+    this.setViewInfo('');
+  }
+
+  public open(): void {
+    this.opened = true;
+  }
 
   viewInfo = '';
   public gridView: any[] = assignPrivilegeConfig;

@@ -2,7 +2,7 @@
     <nav>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="">
-                    <kendo-icon name="settings" size="default"></kendo-icon>
+                    <kendo-icon name="gear" size="default"></kendo-icon>
                     User Management</a></li>
             <li class="breadcrumb-item"><a href="">Group Details</a></li>
             <li class="breadcrumb-item active">Create Group</li>
@@ -32,7 +32,7 @@
                 </kendo-label>
             </div>
             <button kendoButton themeColor="info" (click)="setViewInfo('assignPrivilege')"
-                iconClass="k-icon k-i-plus">Assign Privilege</button>
+                iconClass="k-icon k-i-file-add">Assign Privilege</button>
         </ng-container>
         <ng-container *ngIf="viewInfo === 'assignPrivilege'">
             <div>
@@ -92,5 +92,15 @@
                     <kendo-label class="k-checkbox-label" [for]="No"></kendo-label>
                 </ng-template></kendo-grid-column>
         </kendo-grid>
+        <button kendoButton themeColor="info" (click)="open()"
+            iconClass="k-icon k-i-check-circle">Confirm & Create Group</button>
     </section>
 </main>
+
+<kendo-dialog *ngIf="opened" (close)="close()">
+    <kendo-dialog-titlebar></kendo-dialog-titlebar>
+    <div style="text-align: center; margin: 30px;">
+        <h6>Group ID : 1006 & Group Name : Branch-Others Module-Checker has been crated successfully</h6>
+        <button kendoButton themeColor="info" (click)="close()">OK</button>
+    </div>
+</kendo-dialog>

@@ -57,118 +57,105 @@
             <thead>
                 <tr>
                     <th>Bucket No</th>
-                    <th>BBucket Description</th>
+                    <th>Bucket Description</th>
                     <th>Select Email Template</th>
                     <th>Frequency</th>
-                    <th colspan="3">Day of Week/Month</th>   
+                    <th colspan="3">Select to Day of Week/Month</th>
                 </tr>
             </thead>
-                <tr>
-                    <td>Bucket 1</td>
-                    <td>Very Low</td>
-                    <td>
-                        <Select>
-                            <option>SMA Template</option>
-                        </Select>
-                    </td>
-                    <td>
-                        <Select>
-                            <option>Monthly</option>
-                        </Select>
-                    </td>
-                    <td>Please Select Month</td>
-                    <td>
-                        <Select>
-                            <option>5</option>
-                        </Select>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Bucket 2</td>
-                    <td rowspan="2">Very Low</td>
-                    <td rowspan="2">
-                        <Select>
-                            <option>SMA Template</option>
-                        </Select>
-                    </td>
-                    <td rowspan="2">
-                        <Select>
-                            <option>Monthly</option>
-                        </Select>
-                    </td>
-                    <td>Please Select of Month</td>
-                    <td rowspan="2">
-                        <Select>
-                            <option>5</option>
-                        </Select>
-                    </td>
-                    <td rowspan="2">
-                        <Select>
-                            <option>15</option>
-                        </Select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Please Select of Week</td>
-                </tr>
-                <tr>
-                    <td>Bucket 3</td>
-                    <td>Very Low</td>
-                    <td>
-                        <Select>
-                            <option>SMA Template</option>
-                        </Select>
-                    </td>
-                    <td>
-                        <Select>
-                            <option>Monthly</option>
-                        </Select>
-                    </td>
-                    <td>Please Select Month</td>
-                    <td>
-                        <Select>
-                            <option>5</option>
-                        </Select>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Bucket 4</td>
-                    <td rowspan="2">Very Low</td>
-                    <td rowspan="2">
-                        <Select>
-                            <option>SMA Template</option>
-                        </Select>
-                    </td>
-                    <td rowspan="2">
-                        <Select>
-                            <option>Monthly</option>
-                        </Select>
-                    </td>
-                    <td>Please Select of Month</td>
-                    <td rowspan="2">
-                        <Select>
-                            <option>5</option>
-                        </Select>
-                    </td>
-                    <td rowspan="2">
-                        <Select>
-                            <option>15</option>
-                        </Select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Please Select of Week</td>
-                </tr>
-           
+            <tr>
+                <td>Bucket 1</td>
+                <td>Very Low</td>
+                <td>
+                    <kendo-dropdownlist [data]="listItemsTemplate" [(ngModel)]="selectedTemplate">
+                    </kendo-dropdownlist>
+                </td>
+                <td>
+                    <kendo-dropdownlist [data]="listItemsMonth2" [(ngModel)]="selectedMonth2">
+                    </kendo-dropdownlist>
+                </td>
+                <td>Please Select Month</td>
+                <td>
+                    <kendo-dropdownlist [data]="listItemsMonth2" [(ngModel)]="selectedMonth2">
+                    </kendo-dropdownlist>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td rowspan="2">Bucket 2</td>
+                <td rowspan="2">Very Low</td>
+                <td rowspan="2">
+                    <kendo-dropdownlist [data]="listItemsTemplate" [(ngModel)]="selectedTemplate">
+                    </kendo-dropdownlist>
+                </td>
+                <td rowspan="2">
+                    <kendo-dropdownlist [data]="listItemsMonth2" [(ngModel)]="selectedMonth2">
+                    </kendo-dropdownlist>
+                </td>
+                <td>Please Select of Month</td>
+                <td rowspan="2">
+                    <kendo-dropdownlist [data]="listItemsMonth2" [(ngModel)]="selectedMonth2">
+                    </kendo-dropdownlist>
+                </td>
+                <td rowspan="2">
+                    <kendo-dropdownlist [data]="listItemsMonth2" [(ngModel)]="selectedMonth2">
+                    </kendo-dropdownlist>
+                </td>
+            </tr>
+            <tr>
+                <td>Please Select of Week</td>
+            </tr>
+            <tr>
+                <td>Bucket 3</td>
+                <td>Very Low</td>
+                <td>
+                    <kendo-dropdownlist [data]="listItemsTemplate" [(ngModel)]="selectedTemplate">
+                    </kendo-dropdownlist>
+                </td>
+                <td>
+                    <kendo-dropdownlist [data]="listItemsMonth2" [(ngModel)]="selectedMonth2">
+                    </kendo-dropdownlist>
+                </td>
+                <td>Please Select Month</td>
+                <td>
+                    <kendo-dropdownlist [data]="listItemsMonth2" [(ngModel)]="selectedMonth2">
+                    </kendo-dropdownlist>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td rowspan="2">Bucket 4</td>
+                <td rowspan="2">Very Low</td>
+                <td rowspan="2">
+                    <kendo-dropdownlist [data]="listItemsTemplate" [(ngModel)]="selectedTemplate">
+                    </kendo-dropdownlist>
+                </td>
+                <td rowspan="2">
+                    <kendo-dropdownlist [data]="listItemsMonth2" [(ngModel)]="selectedMonth2">
+                    </kendo-dropdownlist>
+                </td>
+                <td>Please Select of Month</td>
+                <td rowspan="2">
+                    <kendo-dropdownlist [data]="listItemsMonth2" [(ngModel)]="selectedMonth2">
+                    </kendo-dropdownlist>
+                </td>
+                <td rowspan="2">
+                    <kendo-dropdownlist [data]="listItemsMonth2" [(ngModel)]="selectedMonth2">
+                    </kendo-dropdownlist>
+                </td>
+            </tr>
+            <tr>
+                <td>Please Select of Week</td>
+            </tr>
+
         </table>
-        <button class="primary-btn margin-left-auto" kendoButton themeColor="info" (click)="open()">Confirm changes</button>
+        <button class="primary-btn margin-left-auto" kendoButton themeColor="info" (click)="open()">Confirm
+            changes</button>
     </section>
 </main>
 
 <kendo-dialog *ngIf="opened" (close)="close()">
     <kendo-dialog-titlebar></kendo-dialog-titlebar>
-        <p>Email Frequency Configuration has updated successfully </p>
-        <button kendoButton themeColor="info" (click)="close()">OK</button>
+    <p>Email Frequency Configuration has updated successfully </p>
+    <button class="kendo-btn-border" kendoButton themeColor="info" (click)="close()">OK</button>
 </kendo-dialog>

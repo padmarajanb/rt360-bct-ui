@@ -15,19 +15,21 @@
         <ng-container *ngIf="viewInfo === ''">
             <div class="input-basic-item create-basic">
                 <kendo-label class="k-form" text="Group Name">
-                    <kendo-textbox [style.width.px]="300" placeholder="" [clearButton]="true">
+                    <kendo-textbox [style.width.px]="300" [(ngModel)]="groupName" placeholder="" [clearButton]="true">
                     </kendo-textbox>
                 </kendo-label>
                 <kendo-label class="k-form" text="Group Description">
-                    <kendo-textarea [cols]="50" style="width: auto;">
+                    <kendo-textarea [cols]="50" [(ngModel)]="groupDesc" style="width: auto;">
                     </kendo-textarea>
                 </kendo-label>
                 <kendo-label class="k-form" text="Assign Module">
-                    <kendo-dropdownlist textField="displayValue" valueField="actualValue">
+                    <kendo-dropdownlist [data]="listItemsModule"
+                    [(ngModel)]="selectedModule" >
                     </kendo-dropdownlist>
                 </kendo-label>
                 <kendo-label class="k-form" text="Assign Role">
-                    <kendo-dropdownlist textField="displayValue" valueField="actualValue">
+                    <kendo-dropdownlist [data]="listItemsRole"
+                    [(ngModel)]="selectedRole">
                     </kendo-dropdownlist>
                 </kendo-label>
             </div>
@@ -38,19 +40,19 @@
             <ul class="detail-list">
                 <li>
                     <label> Group Name</label>
-                    <p>Branch 0ther Module Checker </p>
+                    <p>{{groupName}}</p>
                 </li>
                 <li>
                     <label> Group Description</label>
-                    <p>Branch 0ther Module Checker </p>
+                    <p>{{groupDesc}}</p>
                 </li>
                 <li>
                     <label> Assign Module</label>
-                    <p>All Module </p>
+                    <p>{{selectedModule}}</p>
                 </li>
                 <li>
                     <label> Assign Role</label>
-                    <p>Admin </p>
+                    <p>{{selectedRole}}</p>
                 </li>
                
             </ul>
@@ -117,6 +119,6 @@
     <kendo-dialog-titlebar></kendo-dialog-titlebar>
     <div>
         <p>Group ID : 1006 & Group Name : Branch-Others Module-Checker has been crated successfully</p>
-        <button kendoButton themeColor="info" (click)="close()">OK</button>
+        <button class="kendo-btn-border" kendoButton themeColor="info" (click)="close()">OK</button>
     </div>
 </kendo-dialog>

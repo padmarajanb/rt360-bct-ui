@@ -28,7 +28,7 @@ body{
 }
 
 .primary-btn {
-  background:#3B73CD;
+  background-color: #1874ce;
   font-size: 12px;
   font-family: var(--font);
   color: #ffffff;
@@ -247,8 +247,9 @@ body{
   margin-bottom: 15px;
 }
 .heading {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
+  font-family: var(--font-bold);
 }
 .border-bottom {
   border-radius: 1px solid #f5f5f5;
@@ -320,6 +321,7 @@ body{
 }
 .k-pager {
   border: none;
+  border-top: 5px solid #fff;
 }
 .k-pager-numbers {
   background: #3D77D7;
@@ -475,4 +477,18 @@ body{
       font-weight: bold;
     }
   }
+}
+
+.k-rounded-md {
+  border-radius: 0px !important;
+}
+
+.kendo-btn-border{
+  border-radius: 25px !important;
+}
+
+.k-button-solid-info{
+  border-color: #1874ce;
+  color: white;
+  background-color: #1874ce;
 }

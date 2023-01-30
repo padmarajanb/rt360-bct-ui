@@ -10,6 +10,13 @@ export class CreateGroupComponent implements OnInit {
 
   constructor() { }
 
+  public listItemsModule: Array<string> = ["All Module", "Others"];
+  public selectedModule = "All Module";
+  public listItemsRole: Array<string> = ["Admin", "Others"];
+  public selectedRole = "Admin";
+  public groupName = "Branch Other Checker";
+  public groupDesc = "Branch Other Checker";
+
   ngOnInit(): void {
   }
   

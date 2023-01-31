@@ -8,7 +8,53 @@ import { Rt360Service } from 'src/app/rt360.service';
   styleUrls: ['./edit-email-frequency-config.component.scss']
 })
 export class EditEmailFrequencyConfigComponent implements OnInit {
+
+  /**
+   * variable
+   */
+  listItemsTemplate: Array<string> = ["SMA Template", "Others"];
+  /**
+   * variable
+   */
+  selectedTemplate = "SMA Template";
+  /**
+   * variable
+   */
+  listItemsMonthlyFreq: Array<string> = ["Monthly", "Weekly", "Daily", "Fortnightly", "Twice in A Week"];
+  /**
+   * variable
+   */
+  selectedMonthlyFreq = "Monthly";
+  /**
+   * variable
+   */
+  listItemsMonth1: Array<string> = ["5", "10", "15"];
+  /**
+   * variable
+   */
+  selectedMonth1 = "5";
+  /**
+   * variable
+   */
+  listItemsMonth2: Array<string> = ["15", "20", "25"];
+  /**
+   * variable
+   */
+  selectedMonth2 = "15";
+  /**
+   * variable
+   */
   show = false;
+  /**
+   * variable
+   */
+
+  gridView: any[] = editemailfrequencyconfigData;
+  /**
+   * variable
+   */
+
+  opened = false;
 
   constructor(
     private rtservice: Rt360Service) { }
@@ -16,30 +62,13 @@ export class EditEmailFrequencyConfigComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public listItemsTemplate: Array<string> = ["5", "Others"];
-  public selectedTemplate = "SMA Template";
-  public listItemsMonthlyFreq: Array<string> = ["5", "Others"];
-  public selectedMonthlyFreq = "Monthly";
-  public listItemsMonth1: Array<string> = ["5", "Others"];
-  public selectedMonth1 = "5";
-  public listItemsMonth2: Array<string> = ["15", "Others"];
-  public selectedMonth2 = "15";
-
-  public opened = false;
-
-  public close(): void {
+  close(): void {
     this.opened = false;
     this.rtservice.pageInfo = 'emailFrequencyConfig';
   }
 
-  public open(): void {
+  open(): void {
     this.opened = true;
-  }
-  
-  public gridView: any[] = editemailfrequencyconfigData;
-
-  
-  confirmPopup() {
   }
 
 }

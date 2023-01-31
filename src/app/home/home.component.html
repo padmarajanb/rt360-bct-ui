@@ -36,7 +36,8 @@
     <li class="">
       <kendo-icon name="track-changes-enable" size="xlarge"></kendo-icon>
     </li>
-    <li [ngClass]="{'active': rtservice.pageInfo !== '' && rtservice.pageInfo !== 'createGroup' && rtservice.pageInfo !== 'alertConfig'}">
+    <li
+      [ngClass]="{'active': rtservice.pageInfo !== '' && rtservice.pageInfo !== 'createGroup' && rtservice.pageInfo !== 'alertConfig'}">
       <kendo-icon name="dictionary-add" size="xlarge"></kendo-icon>
     </li>
     <li class="">
@@ -59,10 +60,6 @@
         <ul class="main-nav">
           <li (click)="updateNavLink('emailTemplateConfig')"><a>Email Template Configuration</a></li>
           <li (click)="updateNavLink('emailFrequencyConfig')"><a>Email Frequency Configuration</a></li>
-          <!-- <li (click)="updateNavLink('editemailFrequencyConfig')"><a>Edit Email Frequency Configuration</a></li>
-          <li (click)="updateNavLink('createemailTemplateConfig')"><a>Create Email Template Configuration</a></li>
-        </ul>
-        <ul class="main-nav"> -->
           <li (click)="updateNavLink('createGroup')"><a>Create Group</a></li>
           <li (click)="updateNavLink('alertConfig')"><a>Alert Configuration</a></li>
         </ul>

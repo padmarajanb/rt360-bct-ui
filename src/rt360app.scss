@@ -499,3 +499,13 @@ body{
   color: white;
   background-color: #1874ce;
 }
+
+
+.k-list-item:focus, .k-list-optionlabel:focus, .k-list-item.k-focus, .k-focus.k-list-optionlabel {
+  //box-shadow: inset 0 0 0 2px red;
+  background-color: #1874ce !important;
+}
+.k-list-item:hover, .k-list-optionlabel:hover, .k-list-item.k-hover, .k-hover.k-list-optionlabel {
+  color: #424242;
+  background-color: #ececec;
+}

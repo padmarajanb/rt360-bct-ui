@@ -13,46 +13,6 @@
         <div class="header-container border-bottom">
             <h2 class="heading">Email Frequency Configuration</h2>
         </div>
-        <!-- <kendo-grid [kendoGridBinding]="gridView" scrollable="none">
-            <kendo-grid-column field="BucketNo" title="Bucket No."></kendo-grid-column>
-            <kendo-grid-column field="BucketDesc" title="Bucket Description"></kendo-grid-column>
-            <kendo-grid-column field="EmailTemplate" title="Email Template">
-                <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
-                    <kendo-dropdownlist textField="displayValue" valueField="actualValue">
-                    </kendo-dropdownlist>
-                </ng-template>
-            </kendo-grid-column>
-            <kendo-grid-column field="Frequency" title="Frequency">
-                <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
-                    <kendo-dropdownlist textField="displayValue" valueField="actualValue">
-                    </kendo-dropdownlist>
-                </ng-template>
-            </kendo-grid-column>
-            <kendo-grid-column field="SelectDay" title="Select Day Of Week/Month">
-                <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
-                    <table>
-                        <tr>
-                            <td> Please Select day of month </td>
-                            <td [rowSpan]="rowIndex == 1 ||  rowIndex == 3 ? 2 : 1">
-                                <kendo-dropdownlist textField="displayValue" valueField="actualValue">
-                                </kendo-dropdownlist>
-                            </td>
-                            <td [rowSpan]="rowIndex == 1 ||  rowIndex == 3 ? 2 : 1"
-                                *ngIf="rowIndex == 1 ||  rowIndex == 3">
-                                <kendo-dropdownlist textField="displayValue" valueField="actualValue">
-                                </kendo-dropdownlist>
-                            </td>
-                        </tr>
-                        <ng-container *ngIf="rowIndex == 1  ||  rowIndex == 3">
-                            <tr>
-                                <td>Please Select day of week</td>
-                            </tr>
-                        </ng-container>
-                    </table>
-                </ng-template>
-            </kendo-grid-column>
-        </kendo-grid> -->
-
         <table class="admin-table">
             <thead>
                 <tr>
@@ -71,7 +31,7 @@
                     </kendo-dropdownlist>
                 </td>
                 <td>
-                    <kendo-dropdownlist [data]="listItemsMonth2" [(ngModel)]="selectedMonth2">
+                    <kendo-dropdownlist [data]="listItemsMonthlyFreq" [(ngModel)]="selectedMonthlyFreq">
                     </kendo-dropdownlist>
                 </td>
                 <td>Please Select Month</td>
@@ -89,7 +49,7 @@
                     </kendo-dropdownlist>
                 </td>
                 <td rowspan="2">
-                    <kendo-dropdownlist [data]="listItemsMonth2" [(ngModel)]="selectedMonth2">
+                    <kendo-dropdownlist [data]="listItemsMonthlyFreq" [(ngModel)]="selectedMonthlyFreq">
                     </kendo-dropdownlist>
                 </td>
                 <td>Please Select of Month</td>
@@ -113,7 +73,7 @@
                     </kendo-dropdownlist>
                 </td>
                 <td>
-                    <kendo-dropdownlist [data]="listItemsMonth2" [(ngModel)]="selectedMonth2">
+                    <kendo-dropdownlist [data]="listItemsMonthlyFreq" [(ngModel)]="selectedMonthlyFreq">
                     </kendo-dropdownlist>
                 </td>
                 <td>Please Select Month</td>
@@ -131,7 +91,7 @@
                     </kendo-dropdownlist>
                 </td>
                 <td rowspan="2">
-                    <kendo-dropdownlist [data]="listItemsMonth2" [(ngModel)]="selectedMonth2">
+                    <kendo-dropdownlist [data]="listItemsMonthlyFreq" [(ngModel)]="selectedMonthlyFreq">
                     </kendo-dropdownlist>
                 </td>
                 <td>Please Select of Month</td>
@@ -150,7 +110,7 @@
 
         </table>
         <button class="primary-btn margin-left-auto" kendoButton themeColor="info" (click)="open()">Confirm
-            changes</button>
+            Changes</button>
     </section>
 </main>
 

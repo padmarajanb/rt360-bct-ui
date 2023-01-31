@@ -7,34 +7,58 @@ import { assignPrivilegeConfig } from '../datas';
   styleUrls: ['./create-group.component.scss']
 })
 export class CreateGroupComponent implements OnInit {
+  /**
+   * variable
+   */
+  public listItemsModule: Array<string> = ["All Module", "Others"];
+  /**
+   * variable
+   */
+  public selectedModule = "All Module";
+  /**
+   * variable
+   */
+  public listItemsRole: Array<string> = ["Admin", "Others"];
+  /**
+   * variable
+   */
+  public selectedRole = "Admin";
+  /**
+   * variable
+   */
+  public groupName = "Branch-Others Module-Checker";
+  /**
+   * variable
+   */
+  public groupDesc = "Branch-Others Module-Checker";
+  /**
+   * variable
+   */
+  viewInfo = '';
+  /**
+   * variable
+   */
+  public gridView: any[] = assignPrivilegeConfig;
+  /**
+   * variable
+   */
+  opened = false;
 
   constructor() { }
 
-  public listItemsModule: Array<string> = ["All Module", "Others"];
-  public selectedModule = "All Module";
-  public listItemsRole: Array<string> = ["Admin", "Others"];
-  public selectedRole = "Admin";
-  public groupName = "Branch Other Checker";
-  public groupDesc = "Branch Other Checker";
-
   ngOnInit(): void {
   }
-  
-  public opened = false;
 
-  public close(): void {
+  close(): void {
     this.opened = false;
     this.setViewInfo('');
   }
 
-  public open(): void {
+  open(): void {
     this.opened = true;
   }
 
-  viewInfo = '';
-  public gridView: any[] = assignPrivilegeConfig;
-
-  setViewInfo(info: any){
+  setViewInfo(info: any) {
     this.viewInfo = info;
   }
 }

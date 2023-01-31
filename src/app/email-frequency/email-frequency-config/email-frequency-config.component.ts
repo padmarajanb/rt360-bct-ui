@@ -8,6 +8,22 @@ import { Rt360Service } from 'src/app/rt360.service';
   styleUrls: ['./email-frequency-config.component.scss']
 })
 export class EmailFrequencyConfigComponent implements OnInit {
+  /**
+   * variable
+   */
+  public gridView: any[] = emailfrequencyconfigData;
+  /**
+   * variable
+   */
+  public pageSize = 5;
+  /**
+   * variable
+   */
+  public buttonCount = 1;
+  /**
+   * variable
+   */
+  public sizes = [10, 20, 50];
 
   constructor(private rtService: Rt360Service) { }
 
@@ -15,12 +31,8 @@ export class EmailFrequencyConfigComponent implements OnInit {
   }
 
 
-  setPageInfo(){
+  setPageInfo() {
     this.rtService.pageInfo = 'editemailFrequencyConfig';
   }
-  
-  public gridView: any[] = emailfrequencyconfigData;
-  public pageSize = 5;
-  public buttonCount = 1;
-  public sizes = [10, 20, 50];
+
 }

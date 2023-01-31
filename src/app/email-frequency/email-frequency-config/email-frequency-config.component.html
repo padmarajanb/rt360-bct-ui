@@ -24,7 +24,8 @@
             <kendo-grid-column field="ModifiedOn" title="Modified On"> </kendo-grid-column>
             <kendo-grid-column field="Action" title="Action">
                 <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
-                    <button kendoButton iconClass="k-icon k-i-change-manually" size="small" (click)="setPageInfo()">Configure / Edit</button>
+                    <button kendoButton iconClass="k-icon k-i-change-manually" size="small"
+                        (click)="setPageInfo()">Configure / Edit</button>
                 </ng-template>
             </kendo-grid-column>
             <ng-template kendoPagerTemplate let-totalPages="totalPages" let-currentPage="currentPage">

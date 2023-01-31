@@ -7,15 +7,26 @@ import { alertConfigData } from "../datas";
   styleUrls: ['./alert-configuration.component.scss']
 })
 export class AlertConfigurationComponent implements OnInit {
+  /**
+   * variable
+   */
+  public gridView: any[] = alertConfigData;
+  /**
+   * variable
+   */
+  public pageSize = 7;
+  /**
+   * variable
+   */
+  public buttonCount = 1;
+  /**
+   * variable
+   */
+  public sizes = [10, 20, 50];
 
   constructor() { }
 
   ngOnInit(): void {
   }
-  checked = true;
-  public gridView: any[] = alertConfigData;
-  public pageSize = 7;
-  public buttonCount = 1;
-  public sizes = [10, 20, 50];
 
 }

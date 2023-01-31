@@ -20,12 +20,12 @@
             <kendo-grid-column field="AlertDesc" title="Alert Description"> </kendo-grid-column>
             <kendo-grid-column field="Checker" title="Checker">
                 <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
-                    <kendo-switch [(ngModel)]="checked"></kendo-switch>
+                    <kendo-switch>rowIndex</kendo-switch>
                 </ng-template>
             </kendo-grid-column>
             <kendo-grid-column field="Escalation" title="Escalation">
                 <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
-                    <kendo-switch [(ngModel)]="checked"></kendo-switch>
+                    <kendo-switch>rowIndex</kendo-switch>
                 </ng-template>
             </kendo-grid-column>
             <kendo-grid-column field="Branch" title="Branch"> </kendo-grid-column>

@@ -350,6 +350,10 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  .k-label,label {
+    margin-bottom: 3px;
+    font-size: 12px;
+  }
   .input-section {
     display: flex;
     width: 75%;
@@ -360,7 +364,7 @@ body{
       }
     }
     .template-item {
-      margin-left: 50px;
+      margin-left: 50px;      
     }
   }
   .formate {
@@ -374,14 +378,17 @@ body{
     justify-content: center;
   }
 }
-
+.k-dialog-wrapper .k-dialog {
+  width: 433px;
+}
 .admin-table {
   width: 100%;
   margin-bottom: 20px;
   th {
     background-color: #fafafa;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: bold;
+    text-align: center;
   }
   th,td {
     padding: 8px 12px;

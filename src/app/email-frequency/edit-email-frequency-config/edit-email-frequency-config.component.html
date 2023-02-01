@@ -20,7 +20,7 @@
                     <th>Bucket Description</th>
                     <th>Select Email Template</th>
                     <th>Frequency</th>
-                    <th colspan="3">Select to Day of Week/Month</th>
+                    <th colspan="3">Select Day of Week/Month</th>
                 </tr>
             </thead>
             <tr>
@@ -43,7 +43,7 @@
             </tr>
             <tr>
                 <td rowspan="2">Bucket 2</td>
-                <td rowspan="2">Very Low</td>
+                <td rowspan="2">Low</td>
                 <td rowspan="2">
                     <kendo-dropdownlist [data]="listItemsTemplate" [(ngModel)]="selectedTemplate">
                     </kendo-dropdownlist>
@@ -67,7 +67,7 @@
             </tr>
             <tr>
                 <td>Bucket 3</td>
-                <td>Very Low</td>
+                <td>Medium</td>
                 <td>
                     <kendo-dropdownlist [data]="listItemsTemplate" [(ngModel)]="selectedTemplate">
                     </kendo-dropdownlist>
@@ -85,7 +85,7 @@
             </tr>
             <tr>
                 <td rowspan="2">Bucket 4</td>
-                <td rowspan="2">Very Low</td>
+                <td rowspan="2">High</td>
                 <td rowspan="2">
                     <kendo-dropdownlist [data]="listItemsTemplate" [(ngModel)]="selectedTemplate">
                     </kendo-dropdownlist>
@@ -106,6 +106,24 @@
             </tr>
             <tr>
                 <td>Please Select of Week</td>
+            </tr>
+            <tr>
+                <td>Bucket 5</td>
+                <td>Very High</td>
+                <td>
+                    <kendo-dropdownlist [data]="listItemsTemplate" [(ngModel)]="selectedTemplate">
+                    </kendo-dropdownlist>
+                </td>
+                <td>
+                    <kendo-dropdownlist [data]="listItemsMonthlyFreq" [(ngModel)]="selectedMonthlyFreq">
+                    </kendo-dropdownlist>
+                </td>
+                <td>Please Select Month</td>
+                <td>
+                    <kendo-dropdownlist [data]="listItemsMonth2" [(ngModel)]="selectedMonth2">
+                    </kendo-dropdownlist>
+                </td>
+                <td></td>
             </tr>
 
         </table>

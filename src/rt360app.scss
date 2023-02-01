@@ -387,7 +387,7 @@ body{
   th {
     background-color: #fafafa;
     font-size: 14px;
-    font-weight: bold;
+    font-family: 'Roboto-Bold';
     text-align: center;
   }
   th,td {
@@ -508,4 +508,8 @@ body{
 .k-list-item:hover, .k-list-optionlabel:hover, .k-list-item.k-hover, .k-hover.k-list-optionlabel {
   color: #424242;
   background-color: #ececec;
+}
+.k-column-title {
+  font-family: 'Roboto-Bold'!important;
+  font-size: 14px!important;
 }
